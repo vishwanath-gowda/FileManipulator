@@ -25,11 +25,17 @@ public class TestFileAccess {
 		assertFalse(result);
 	}
 	
-	public void testgetBufferedReader(String path) throws FileNotFoundException{
+	@Test
+	public void testgetBufferedReader() throws FileNotFoundException{
 		
+		
+		assertNotNull(fileaccess.getBufferedReader("Resources/TestFile.txt"));
 		
 	}
 	public void testgetBufferedReaderNegative(String path) throws FileNotFoundException{
+		assertEquals(null,fileaccess.getBufferedReader("jkh"));
+		
+		
 		
 	}
 	public void testgetBufferedWriter(String path) throws IOException{
