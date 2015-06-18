@@ -1,8 +1,8 @@
 # FileManipulator
 
-This is a custom built library of function to manipulate file.
+This is a custom built library of functions to manipulate file.
 
-It includes functions like readNlines,readNlinesFromMthLine, read last n lines kind of function by just passing path of a file.
+It includes functions like readNlines,readNlinesFromMthLine, read last n lines and many more function by just passing path of a file.
 
 How to use this in your project.
 1)clone or copy source code, 
