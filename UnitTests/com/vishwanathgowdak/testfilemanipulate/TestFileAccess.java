@@ -3,6 +3,7 @@ import static org.junit.Assert.*;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -14,15 +15,15 @@ public class TestFileAccess {
 	FileAccess fileaccess=new FileAccess();
 	@Test
 	public void testisFileExists(){
-		boolean result=fileaccess.isFileExists("Resources/TestFile.txt");
-		assertTrue(result);
+		File result=fileaccess.isFileExists("Resources/TestFile.txt");
+		assertNotNull("File Object null", result);
 
 	}
 	
 	@Test
 	public void testisFileExistsNegative(){
-		boolean result=fileaccess.isFileExists("TestFile.txt");
-		assertFalse(result);
+		File result=fileaccess.isFileExists("TestFile.txt");
+		assertEquals(null, result);
 	}
 	
 	@Test
