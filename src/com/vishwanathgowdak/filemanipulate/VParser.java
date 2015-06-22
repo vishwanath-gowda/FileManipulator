@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class VParser {
+public class VParser implements Parser{
 
 
 	public ArrayList<String> getAllLinesContaining(String search,URL url) throws IOException{
@@ -44,19 +44,22 @@ public class VParser {
 
 			String search[]={"a","b","c","d"};
 
-			URL url=new URL("http://grad-schools.usnews.rankingsandreviews.com/best-graduate-schools/top-science-schools/computer-science-rankings");
+			URL url=new URL("http://www.google.com");
 			new VParser().getAllLinesContaining(search, url);
-			/*
-		ArrayList<String> list=new VParser().getAllLinesContaining("University", url);
-		Iterator<String> iterator=list.listIterator();
+
+			ArrayList<String> list=new VParser().getAllLinesContaining("google", url);
+			Iterator<String> iterator=list.listIterator();
 			while(iterator.hasNext()){
 				System.out.println(iterator.next());
-			}*/
 
-		} catch (IOException e) {
+
+			}
+		}
+		catch (IOException e) {
 			e.printStackTrace();
 		}
 
-	}
 
+
+	}
 }

@@ -24,4 +24,7 @@ public interface FileAccessDAO {
 	public int getTotalLines(FileReader reader) throws IOException;
 	public int getTotalLines(File file) throws FileNotFoundException, IOException;
 	public int getTotalLines(BufferedReader reader) throws IOException;
+	public long getCharacterCount(String Path);
+	public long getCharacterCount(File file);
+	public long getCharacterCount(BufferedReader reader);
 }
