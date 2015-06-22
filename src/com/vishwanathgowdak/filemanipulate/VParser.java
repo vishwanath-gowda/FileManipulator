@@ -62,4 +62,61 @@ public class VParser implements Parser{
 
 
 	}
+
+	@Override
+	public String getFirstLineContaining(String search, String path) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getFirstLineContaining(String search, URL url) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public long countOccurances(String search, String Path) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public long countOccurances(String search, URL url) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public ArrayList<Integer> countOccurances(ArrayList<String> searchList,
+			String Path) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<Integer> countOccurances(ArrayList<String> searchList,
+			URL url) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int isExists(String search, String Path, boolean caseSensitive,
+			boolean wholeWord) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public ArrayList<String> getPalindromes(String Path) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<String> getPalindromes(URL url) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

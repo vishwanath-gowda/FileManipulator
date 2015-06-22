@@ -294,4 +294,22 @@ public class FileAccess implements FileAccessDAO {
 			throw new FileNotFoundException();
 		return getTotalLines(new FileReader(file));
 	}
+
+	@Override
+	public long getCharacterCount(String Path) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public long getCharacterCount(File file) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public long getCharacterCount(BufferedReader reader) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

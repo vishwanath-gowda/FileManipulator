@@ -17,4 +17,6 @@ public interface Parser {
 	public ArrayList<String> getPalindromes(String Path);
 	public ArrayList<String> getPalindromes(URL url);
 	
+	
+	
 }
