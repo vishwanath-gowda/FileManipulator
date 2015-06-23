@@ -296,20 +296,21 @@ public class FileAccess implements FileAccessDAO {
 	}
 
 	@Override
-	public long getCharacterCount(String Path) {
-		// TODO Auto-generated method stub
-		return 0;
+	public long getCharacterCount(String path) {
+		File file=isFileExists(path);
+		return (file!=null)? file.length():-1;	
 	}
 
 	@Override
 	public long getCharacterCount(File file) {
-		// TODO Auto-generated method stub
-		return 0;
+		return (file!=null)? file.length():-1;
 	}
 
 	@Override
-	public long getCharacterCount(BufferedReader reader) {
-		// TODO Auto-generated method stub
-		return 0;
+	public long getCharacterCount(BufferedReader reader) throws IOException {
+		long count=0;
+		while(reader.read()!=-1)
+			count++;
+		return count;
 	}
 }

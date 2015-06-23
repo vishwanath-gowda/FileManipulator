@@ -1,5 +1,8 @@
 package com.vishwanathgowdak.filemanipulate;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -64,27 +67,55 @@ public class VParser implements Parser{
 	}
 
 	@Override
-	public String getFirstLineContaining(String search, String path) {
-		// TODO Auto-generated method stub
+	public String getFirstLineContaining(String search, String path) throws IOException {
+		if(search!=null && !search.isEmpty() && search.trim()!=""){
+			BufferedReader reader=new FileAccess().getBufferedReader(path);
+
+			String line;
+			while((line=reader.readLine())!=null){
+				if(line.contains(search))
+					return line;
+			}
+		}else{
+			throw new NullPointerException();
+		}
 		return null;
 	}
 
 	@Override
-	public String getFirstLineContaining(String search, URL url) {
-		// TODO Auto-generated method stub
+	public String getFirstLineContaining(String search, URL url) throws IOException {
+		if(search==null||search.isEmpty()||search.trim()=="")
+			throw new NullPointerException();
+		String[] allLines=new FileAccess().getAllLines(url);
+		for(int i=0;i<allLines.length;i++){
+			if(allLines[i].contains(search))
+				return allLines[i];
+		}
 		return null;
 	}
 
 	@Override
-	public long countOccurances(String search, String Path) {
-		// TODO Auto-generated method stub
-		return 0;
+	public long countOccurances(String search, String path) throws IOException {
+		if(search==null||search.isEmpty()||search.trim()=="")
+			throw new NullPointerException();
+		long count=0;
+		String[] allLines=new FileAccess().getAllLines(path);
+		for(int i=0;i<allLines.length;i++)
+			count=(allLines[i].contains(search))?(count+1):count;
+
+			return count;
 	}
 
 	@Override
-	public long countOccurances(String search, URL url) {
-		// TODO Auto-generated method stub
-		return 0;
+	public long countOccurances(String search, URL url) throws IOException {
+		if(search==null||search.isEmpty()||search.trim()=="")
+			throw new NullPointerException();
+		long count=0;
+		String[] allLines=new FileAccess().getAllLines(url);
+		for(int i=0;i<allLines.length;i++)
+			count=(allLines[i].contains(search))?(count+1):count;
+
+			return count;
 	}
 
 	@Override
