@@ -1,0 +1,12 @@
+<Node>0</Node>
+					  <Seq>17459</Seq>
+					  <Sev>2</Sev>
+					  <Type>evt_rm_resource_restart_fail</Type>
+					  <Time>1436954349</Time>
+					  <HiResTime>6171671934800219304</HiResTime>
+					  <MessageCode>2424844</MessageCode>
+					  <AlertId>79</AlertId>
+					  <Class>evt_class_alert</Class>
+					  <PrimaryComp>
+					    <CompType>comp_sw_rmm</CompType>
+					    <CompId>1234</CompId>
